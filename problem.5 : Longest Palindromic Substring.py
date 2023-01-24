@@ -7,8 +7,6 @@ Explanation: "aba" is also a valid answer.
  """
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        if len(s) == 1: # case s contains one character
-            return s
         longest=''
         for i in range(len(s)):
             sub=s[i]
@@ -16,4 +14,4 @@ class Solution:
                 sub+= s[j]
                 if sub == sub[::-1] and len(sub) > len(longest):
                     longest = sub
-        return longest
+        return longest if longest else s[0] # as s maybe contains no palindromic substrings / very few chars
