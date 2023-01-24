@@ -19,3 +19,4 @@ class Solution:
                 longest = len(sub)
         
         return longest
+ 
